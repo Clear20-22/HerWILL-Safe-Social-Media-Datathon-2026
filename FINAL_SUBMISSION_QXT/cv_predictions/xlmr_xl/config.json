@@ -1,0 +1,17 @@
+{
+ "model": "facebook/xlm-roberta-xl",
+ "epochs": 3,
+ "batch": 16,
+ "accum": 2,
+ "lr": 0.0002,
+ "warmup": 0.06,
+ "max_len": 128,
+ "seed": 42,
+ "lora": {
+  "r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": ".*encoder\\.layer\\.\\d+\\.(attention\\.self\\.(query|key|value)|attention\\.output\\.dense|intermediate\\.dense|output\\.dense)"
+ },
+ "gate_fold0_f1": 0.585
+}

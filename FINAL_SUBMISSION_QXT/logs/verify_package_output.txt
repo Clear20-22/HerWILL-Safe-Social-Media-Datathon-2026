@@ -1,0 +1,7 @@
+[1] blend 0.50*Qwen + 0.25*XL + 0.25*TF-IDF == saved final probabilities (max diff 0.0e+00)
+[2] submission labels == argmax of the blend, for all rows
+[3] format OK: id,y_pred | 11955 rows | unique ids | label share {0: 0.532, 1: 0.355, 2: 0.113}
+[4] code-form zip OK: 580 MB (< 1 GB form limit), notebook + README + requirements + 10 adapters
+[5] notebook run in fp16 (Kaggle T4 precision) agrees with the submission on 99.82% of rows
+
+ALL CHECKS PASSED. 5-fold OOF macro-F1 of this submission: 0.6165

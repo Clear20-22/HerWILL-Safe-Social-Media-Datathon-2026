@@ -1,0 +1,17 @@
+# Python / tools
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Competition data and every file that contains competition text (not redistributed)
+data/raw/
+*.pkl
+**/test_predictions_*.csv
+FINAL_SUBMISSION_QXT/internal_only_do_not_share/
+experiments/logs/01_eda.txt
+
+# Large binaries: packaged zips and LoRA adapter weights (kept locally and inside the form zip)
+dist/
+*.zip
+*.safetensors

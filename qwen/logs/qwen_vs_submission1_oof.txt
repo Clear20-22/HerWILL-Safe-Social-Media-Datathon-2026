@@ -1,0 +1,14 @@
+5-fold OOF, n=47,817
+Submission #1 ensemble       macroF1=0.5936 acc=0.6234 per-class=[0.708, 0.533, 0.54] latin=0.6219 bangla=0.4978
+Qwen3-4B alone               macroF1=0.6016 acc=0.6287 per-class=[0.708, 0.545, 0.551] latin=0.6412 bangla=0.4871
+
+Qwen alone vs Submission #1: +0.0078 CI[+0.0035,+0.0119] P(no gain)=0.000
+
+Blends of Qwen with the Submission #1 ensemble (weights Qwen:ensemble):
+  1:1  macroF1=0.6117  vs Qwen alone +0.0102 CI[+0.0074,+0.0130] P(no gain)=0.000
+  2:1  macroF1=0.6115  vs Qwen alone +0.0100 CI[+0.0078,+0.0123] P(no gain)=0.000
+  3:1  macroF1=0.6090  vs Qwen alone +0.0075 CI[+0.0055,+0.0094] P(no gain)=0.000
+  4:1  macroF1=0.6071  vs Qwen alone +0.0056 CI[+0.0040,+0.0072] P(no gain)=0.000
+
+test-prediction agreement Qwen vs Submission #1: 0.810
+qwen submission check: header ['id', 'y_pred'] rows 11955 ids match sample order True labels [np.int64(0), np.int64(1), np.int64(2)] NaN 0 | matches test.npy argmax True

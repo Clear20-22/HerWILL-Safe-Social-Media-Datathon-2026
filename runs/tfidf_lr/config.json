@@ -1,0 +1,10 @@
+{
+ "model": "TF-IDF word(1-2)+char_wb(2-5) + LogisticRegression(C=4, balanced)",
+ "word_max": 300000,
+ "char_max": 500000,
+ "min_df_word": 2,
+ "min_df_char": 3,
+ "sublinear_tf": true,
+ "folds": "StratifiedKFold(5, shuffle, seed 42)",
+ "source": "src/herwill_final.py run_tfidf() == src/herwill_final_kaggle.py section 3"
+}

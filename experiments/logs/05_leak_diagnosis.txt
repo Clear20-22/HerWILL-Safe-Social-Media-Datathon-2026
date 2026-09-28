@@ -1,0 +1,3 @@
+text-only ensemble (fold 0): 0.5968
+id-neighbour only (k=2 majority): 0.5885
+text + id-leak stacked (honest 5-fold within fold 0): 0.6665

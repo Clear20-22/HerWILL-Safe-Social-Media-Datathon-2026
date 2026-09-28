@@ -1,0 +1,4 @@
+text-only final blend OOF: 0.6131
+id-neighbours only (k=1 each side, majority): 0.5619
+id-neighbour features only (GBM): 0.5942
+text blend + id features (GBM): 0.6809

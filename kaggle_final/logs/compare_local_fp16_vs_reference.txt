@@ -1,0 +1,5 @@
+run: kaggle_final/results/local_fp16  mode=predict dtype=torch.float16 minutes={'qwen': 15.0, 'xl': 3.7, 'tfidf': 2.3}
+qwen   test: max|dp|=0.0176 mean|dp|=0.00100 argmax agree=0.9976 | OOF rows=47817: argmax agree=0.9944 F1 run=0.6013 ref=0.6016
+xl     test: max|dp|=0.0274 mean|dp|=0.00060 argmax agree=0.9992 | OOF rows=47817: argmax agree=0.9975 F1 run=0.5915 ref=0.5915
+tfidf  test: max|dp|=0.0000 mean|dp|=0.00000 argmax agree=1.0000 | OOF rows=47817: argmax agree=1.0000 F1 run=0.5277 ref=0.5277
+submission vs final_qxt/submission/submission_final_qxt.csv: label agreement 0.9982 on 11955 rows

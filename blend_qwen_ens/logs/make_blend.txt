@@ -1,0 +1,12 @@
+OOF macro-F1: blend=0.6117  qwen=0.6016  submission#1=0.5936
+              precision    recall  f1-score   support
+
+           0     0.6957    0.7429    0.7185     23756
+           1     0.5730    0.5298    0.5505     18163
+           2     0.5781    0.5543    0.5659      5898
+
+    accuracy                         0.6387     47817
+   macro avg     0.6156    0.6090    0.6117     47817
+weighted avg     0.6346    0.6387    0.6359     47817
+
+saved /home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/blend_qwen_ens/submission/submission_qwen_plus_ensemble_1to1.csv rows 11955 dist {0: 0.535, 1: 0.347, 2: 0.118}

@@ -1,0 +1,41 @@
+=== single models (fold 0, n=9564) ===
+                              model  license_ok  macro_f1          ci95  f1_c0  f1_c1  f1_c2  latin  bangla
+                  xlm-roberta-large        True    0.5792 [0.568,0.590] 0.6995 0.5158 0.5223 0.6091  0.4759
+         microsoft/mdeberta-v3-base        True    0.5770 [0.566,0.588] 0.6899 0.5284 0.5128 0.6079  0.4768
+cardiffnlp/twitter-xlm-roberta-base       False    0.5745 [0.564,0.586] 0.6923 0.5266 0.5046 0.6046  0.4777
+                   xlm-roberta-base        True    0.5623 [0.551,0.573] 0.6650 0.5439 0.4780 0.5909  0.4729
+            google/muril-base-cased        True    0.5560 [0.546,0.568] 0.6734 0.5059 0.4889 0.5728  0.4839
+              csebuetnlp/banglabert       False    0.5470 [0.535,0.560] 0.6667 0.5486 0.4256 0.5565  0.5052
+                           tfidf-lr        True    0.5280 [0.517,0.540] 0.6558 0.5050 0.4233 0.5414  0.4647
+
+best license-OK single: xlm-roberta-large
+
+=== paired bootstrap vs best license-OK single (diff, 95% CI, P(diff<=0)) ===
+cardiffnlp/twitter-xlm-roberta-base      -0.0046 [-0.0146,+0.0052] p=0.821
+csebuetnlp/banglabert                    -0.0320 [-0.0444,-0.0200] p=1.000
+google/muril-base-cased                  -0.0228 [-0.0333,-0.0120] p=1.000
+microsoft/mdeberta-v3-base               -0.0018 [-0.0120,+0.0087] p=0.640
+xlm-roberta-base                         -0.0170 [-0.0268,-0.0071] p=1.000
+tfidf-lr                                 -0.0510 [-0.0637,-0.0382] p=1.000
+
+=== equal-weight ensembles (license-OK models only) ===
+0.5968  microsoft/mdeberta-v3-base + xlm-roberta-base + xlm-roberta-large + tfidf-lr
+0.5944  google/muril-base-cased + microsoft/mdeberta-v3-base + xlm-roberta-base + xlm-roberta-large + tfidf-lr
+0.5943  google/muril-base-cased + microsoft/mdeberta-v3-base + xlm-roberta-large + tfidf-lr
+0.5935  microsoft/mdeberta-v3-base + xlm-roberta-large + tfidf-lr
+0.5928  xlm-roberta-base + xlm-roberta-large + tfidf-lr
+0.5922  google/muril-base-cased + microsoft/mdeberta-v3-base + xlm-roberta-base + xlm-roberta-large
+0.5917  google/muril-base-cased + xlm-roberta-base + xlm-roberta-large + tfidf-lr
+0.5890  google/muril-base-cased + xlm-roberta-base + xlm-roberta-large
+0.5890  google/muril-base-cased + xlm-roberta-large + tfidf-lr
+0.5880  microsoft/mdeberta-v3-base + xlm-roberta-large
+
+best ensemble vs xlm-roberta-large: +0.0176 [+0.0098,+0.0256] P(no gain)=0.000
+  latin: ensemble 0.6257 vs single 0.6091
+  bangla: ensemble 0.4944 vs single 0.4759
+  mixed: ensemble 0.5207 vs single 0.5526
+
+=== class-prior reweighting, honest split-half (tune on half A, eval on half B, and swap) ===
+weights [1.  1.1 0.8] held-out gain -0.0066
+weights [1.  1.  0.9] held-out gain +0.0012
+mean held-out gain from prior tuning: -0.0027

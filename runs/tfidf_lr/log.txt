@@ -1,0 +1,125 @@
+data=/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/data  out=/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/outputs  device=cuda  gpu=NVIDIA GeForce RTX 4090  amp=torch.bfloat16
+torch 2.6.0+cu124 | transformers 4.57.6
+train=47817 test=11955 label dist=[0.49681076 0.37984399 0.12334525]
+class loss weights: [0.723 0.827 1.451]
+
+=== TF-IDF + LR ===
+  tfidf fold 0: macro-F1=0.5287
+  tfidf fold 1: macro-F1=0.5232
+  tfidf fold 2: macro-F1=0.5294
+  tfidf fold 3: macro-F1=0.5274
+  tfidf fold 4: macro-F1=0.5299
+
+=== xlm-roberta-large (lr=1e-05, epochs=3, batch=16x2) ===
+  xlm-roberta-large fold 0 ...
+    epoch 1: train_loss=0.9538 val_loss=0.8636 val_macroF1=0.5692
+    epoch 2: train_loss=0.8394 val_loss=0.8470 val_macroF1=0.5781
+    epoch 3: train_loss=0.7680 val_loss=0.8755 val_macroF1=0.5779
+  xlm-roberta-large fold 0: macro-F1=0.5781 (best epoch 2, 9.8 min)
+  xlm-roberta-large fold 1 ...
+    epoch 1: train_loss=0.9619 val_loss=0.9654 val_macroF1=0.5079
+    epoch 2: train_loss=0.8400 val_loss=0.8744 val_macroF1=0.5553
+    epoch 3: train_loss=0.7637 val_loss=0.8819 val_macroF1=0.5708
+  xlm-roberta-large fold 1: macro-F1=0.5708 (best epoch 3, 10.0 min)
+  xlm-roberta-large fold 2 ...
+    epoch 1: train_loss=0.9458 val_loss=0.8708 val_macroF1=0.5587
+    epoch 2: train_loss=0.8290 val_loss=0.8668 val_macroF1=0.5655
+    epoch 3: train_loss=0.7601 val_loss=0.8811 val_macroF1=0.5788
+  xlm-roberta-large fold 2: macro-F1=0.5788 (best epoch 3, 9.9 min)
+  xlm-roberta-large fold 3 ...
+    epoch 1: train_loss=0.9491 val_loss=0.9122 val_macroF1=0.5506
+    epoch 2: train_loss=0.8362 val_loss=0.8441 val_macroF1=0.5840
+    epoch 3: train_loss=0.7563 val_loss=0.8645 val_macroF1=0.5827
+  xlm-roberta-large fold 3: macro-F1=0.5840 (best epoch 2, 9.9 min)
+  xlm-roberta-large fold 4 ...
+    epoch 1: train_loss=0.9789 val_loss=0.8910 val_macroF1=0.5475
+    epoch 2: train_loss=0.8562 val_loss=0.8504 val_macroF1=0.5729
+    epoch 3: train_loss=0.7844 val_loss=0.8528 val_macroF1=0.5824
+  xlm-roberta-large fold 4: macro-F1=0.5824 (best epoch 3, 10.0 min)
+
+=== microsoft/mdeberta-v3-base (lr=3e-05, epochs=3, batch=32x1) ===
+  microsoft/mdeberta-v3-base fold 0 ...
+    epoch 1: train_loss=0.9320 val_loss=0.8819 val_macroF1=0.5566
+    epoch 2: train_loss=0.8002 val_loss=0.8791 val_macroF1=0.5616
+    epoch 3: train_loss=0.6937 val_loss=0.9339 val_macroF1=0.5688
+  microsoft/mdeberta-v3-base fold 0: macro-F1=0.5688 (best epoch 3, 5.8 min)
+  microsoft/mdeberta-v3-base fold 1 ...
+    epoch 1: train_loss=0.9292 val_loss=0.9014 val_macroF1=0.5222
+    epoch 2: train_loss=0.8040 val_loss=0.9074 val_macroF1=0.5580
+    epoch 3: train_loss=0.7020 val_loss=0.9501 val_macroF1=0.5629
+  microsoft/mdeberta-v3-base fold 1: macro-F1=0.5629 (best epoch 3, 5.8 min)
+  microsoft/mdeberta-v3-base fold 2 ...
+    epoch 1: train_loss=0.9269 val_loss=0.8822 val_macroF1=0.5506
+    epoch 2: train_loss=0.8021 val_loss=0.8770 val_macroF1=0.5679
+    epoch 3: train_loss=0.6947 val_loss=0.9282 val_macroF1=0.5758
+  microsoft/mdeberta-v3-base fold 2: macro-F1=0.5758 (best epoch 3, 5.7 min)
+  microsoft/mdeberta-v3-base fold 3 ...
+    epoch 1: train_loss=0.9330 val_loss=0.8826 val_macroF1=0.5470
+    epoch 2: train_loss=0.8084 val_loss=0.8602 val_macroF1=0.5797
+    epoch 3: train_loss=0.7006 val_loss=0.9144 val_macroF1=0.5813
+  microsoft/mdeberta-v3-base fold 3: macro-F1=0.5813 (best epoch 3, 5.7 min)
+  microsoft/mdeberta-v3-base fold 4 ...
+    epoch 1: train_loss=0.9318 val_loss=0.8942 val_macroF1=0.5354
+    epoch 2: train_loss=0.8026 val_loss=0.8801 val_macroF1=0.5699
+    epoch 3: train_loss=0.6954 val_loss=0.9176 val_macroF1=0.5686
+  microsoft/mdeberta-v3-base fold 4: macro-F1=0.5699 (best epoch 2, 5.6 min)
+
+=== xlm-roberta-base (lr=2e-05, epochs=3, batch=32x1) ===
+  xlm-roberta-base fold 0 ...
+    epoch 1: train_loss=0.9655 val_loss=0.9013 val_macroF1=0.5397
+    epoch 2: train_loss=0.8538 val_loss=0.8867 val_macroF1=0.5512
+    epoch 3: train_loss=0.7756 val_loss=0.9113 val_macroF1=0.5539
+  xlm-roberta-base fold 0: macro-F1=0.5539 (best epoch 3, 4.3 min)
+  xlm-roberta-base fold 1 ...
+    epoch 1: train_loss=0.9627 val_loss=0.9050 val_macroF1=0.5087
+    epoch 2: train_loss=0.8503 val_loss=0.8820 val_macroF1=0.5594
+    epoch 3: train_loss=0.7734 val_loss=0.9019 val_macroF1=0.5678
+  xlm-roberta-base fold 1: macro-F1=0.5678 (best epoch 3, 4.3 min)
+  xlm-roberta-base fold 2 ...
+    epoch 1: train_loss=0.9614 val_loss=0.8927 val_macroF1=0.5447
+    epoch 2: train_loss=0.8537 val_loss=0.8728 val_macroF1=0.5588
+    epoch 3: train_loss=0.7766 val_loss=0.8974 val_macroF1=0.5640
+  xlm-roberta-base fold 2: macro-F1=0.5640 (best epoch 3, 4.3 min)
+  xlm-roberta-base fold 3 ...
+    epoch 1: train_loss=0.9653 val_loss=0.8897 val_macroF1=0.5297
+    epoch 2: train_loss=0.8558 val_loss=0.8635 val_macroF1=0.5646
+    epoch 3: train_loss=0.7776 val_loss=0.8886 val_macroF1=0.5710
+  xlm-roberta-base fold 3: macro-F1=0.5710 (best epoch 3, 4.3 min)
+  xlm-roberta-base fold 4 ...
+    epoch 1: train_loss=0.9635 val_loss=0.9092 val_macroF1=0.5198
+    epoch 2: train_loss=0.8563 val_loss=0.8708 val_macroF1=0.5621
+    epoch 3: train_loss=0.7834 val_loss=0.8867 val_macroF1=0.5626
+  xlm-roberta-base fold 4: macro-F1=0.5626 (best epoch 3, 4.3 min)
+
+total training time: 102.2 min
+                            macro_f1  f1_class0  f1_class1  f1_class2  f1_latin  f1_bangla  f1_mixed
+model                                                                                               
+tfidf-lr                      0.5277     0.6520     0.5045     0.4267    0.5444     0.4579    0.4623
+xlm-roberta-large             0.5788     0.7042     0.5050     0.5271    0.6113     0.4758    0.4920
+microsoft/mdeberta-v3-base    0.5719     0.6921     0.5141     0.5094    0.6007     0.4816    0.4684
+xlm-roberta-base              0.5639     0.6870     0.5051     0.4996    0.5888     0.4767    0.4866
+ENSEMBLE                      0.5936     0.7080     0.5326     0.5401    0.6219     0.4978    0.5040
+
+Ensemble classification report (OOF):
+               precision    recall  f1-score   support
+
+           0     0.6868    0.7305    0.7080     23756
+           1     0.5569    0.5103    0.5326     18163
+           2     0.5397    0.5405    0.5401      5898
+
+    accuracy                         0.6234     47817
+   macro avg     0.5945    0.5938    0.5936     47817
+weighted avg     0.6193    0.6234    0.6206     47817
+
+Ensemble confusion matrix (rows = true 0/1/2):
+ [[17354  5547   855]
+ [ 7031  9268  1864]
+ [  884  1826  3188]]
+
+saved /home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/outputs/submission.csv  rows=11955  pred dist={0: 0.534, 1: 0.343, 2: 0.123}
+      id  y_pred
+0   7891       1
+1  58497       1
+2   8995       2
+3  17207       1
+4   3148       1

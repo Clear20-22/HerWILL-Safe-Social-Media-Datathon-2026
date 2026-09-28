@@ -1,0 +1,7 @@
+current ensemble (fold 0):            0.5881
+[seed 42] tricks alone: 0.5832
+  replace plain large -> tricks:      0.5878  gain -0.0004 CI[-0.0046,+0.0040] P(no gain)=0.580
+  add tricks as 5th model:            0.5914  gain +0.0031 CI[-0.0012,+0.0078] P(no gain)=0.078
+[seed 7] tricks alone: 0.5862
+  replace plain large -> tricks:      0.5888  gain +0.0006 CI[-0.0035,+0.0049] P(no gain)=0.401
+  add tricks as 5th model:            0.5905  gain +0.0023 CI[-0.0023,+0.0067] P(no gain)=0.163

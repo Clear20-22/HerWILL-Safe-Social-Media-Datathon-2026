@@ -1,0 +1,4 @@
+baseline ensemble: 0.5968
+(1) dup lookup: 189 val rows (1.98%) | lookup acc on them=0.878 vs model acc=0.878 | macroF1=0.5971 gain +0.0002 CI[-0.0008,+0.0013] P(no gain)=0.344
+(2) kNN(k=20) alone: 0.4873
+    stack(ensemble only) 0.5660 | stack(ensemble + kNN) 0.5673 | gain vs stack-only +0.0013 CI[-0.0031,+0.0057] P(no gain)=0.266 | vs argmax -0.0294 CI[-0.0380,-0.0207] P(no gain)=1.000

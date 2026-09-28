@@ -1,0 +1,15 @@
+qwen        OOF macro-F1 = 0.6016
+xlmr_large  OOF macro-F1 = 0.5788
+tfidf       OOF macro-F1 = 0.5277
+FINAL       OOF macro-F1 = 0.6131
+              precision    recall  f1-score   support
+
+           0     0.6952    0.7433    0.7184     23756
+           1     0.5754    0.5352    0.5546     18163
+           2     0.5855    0.5485    0.5664      5898
+
+    accuracy                         0.6402     47817
+   macro avg     0.6187    0.6090    0.6131     47817
+weighted avg     0.6362    0.6402    0.6374     47817
+
+saved /home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/final_qlt/submission/submission_final_qlt.csv rows 11955 dist {0: 0.537, 1: 0.346, 2: 0.117}

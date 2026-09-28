@@ -1,0 +1,13 @@
+Check: adapters stored in fp16 (code-submission package) vs the original fp32 adapters, 2026-09-28.
+Both runs: FORCE_FP16=1 (T4 precision), QUICK=1, QUICK_N=200 -> folds 0-1, 400 held-out rows + 400 test rows per model.
+qwen  oof  rows= 400 max|dp|=0.00e+00 argmax agree=1.0000
+qwen  test rows= 400 max|dp|=0.00e+00 argmax agree=1.0000
+xl    oof  rows= 400 max|dp|=0.00e+00 argmax agree=1.0000
+xl    test rows= 400 max|dp|=0.00e+00 argmax agree=1.0000
+tfidf oof  rows= 400 max|dp|=0.00e+00 argmax agree=1.0000
+tfidf test rows= 400 max|dp|=0.00e+00 argmax agree=1.0000
+Result: bit-identical. In fp16 the LoRA weights are rounded to fp16 before every matmul either way.
+
+Smoke tests of the packaged notebook (herwill_final.py inside the zip), RTX 4090:
+- predict mode, FORCE_FP16=1 QUICK=1: exit 0; adapters read from the package's adapters/qwen3_4b and adapters/xlmr_xl.
+- train mode, TRAIN_LLM=1 QUICK=1 (320 training rows, 1 epoch, folds 0-1): exit 0; peak GPU 10.3 GB (Qwen), 16.4 GB (XL).

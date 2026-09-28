@@ -1,0 +1,72 @@
+data=/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/data  out=kaggle_final/results/local_fp16  device=cuda (NVIDIA GeForce RTX 4090, capability (8, 9))  dtype=torch.float16
+torch 2.6.0+cu124 | transformers 4.57.6 | peft 0.21.0
+mode: PREDICT from adapters  recompute_oof=True  quick=False
+train=47817 test=11955 label dist=[0.497 0.38  0.123] class loss weights=[0.723 0.827 1.451]
+
+=== qwen ===
+
+  qwen fold 0: 186s
+  qwen fold 0: macro-F1=0.6055
+
+  qwen fold 1: 179s
+  qwen fold 1: macro-F1=0.5919
+
+  qwen fold 2: 178s
+  qwen fold 2: macro-F1=0.5967
+
+  qwen fold 3: 178s
+  qwen fold 3: macro-F1=0.6051
+
+  qwen fold 4: 178s
+  qwen fold 4: macro-F1=0.6070
+
+=== xl ===
+  xl fold 0: 44s
+  xl fold 0: macro-F1=0.5945
+  xl fold 1: 43s
+  xl fold 1: macro-F1=0.5827
+  xl fold 2: 43s
+  xl fold 2: macro-F1=0.5906
+  xl fold 3: 43s
+  xl fold 3: macro-F1=0.5934
+  xl fold 4: 43s
+  xl fold 4: macro-F1=0.5962
+
+=== tfidf ===
+  tfidf fold 0: macro-F1=0.5287
+  tfidf fold 1: macro-F1=0.5232
+  tfidf fold 2: macro-F1=0.5294
+  tfidf fold 3: macro-F1=0.5274
+  tfidf fold 4: macro-F1=0.5299
+
+minutes per component: {'qwen': 15.0, 'xl': 3.7, 'tfidf': 2.3} | peak GPU memory (GB): {'qwen': 8.7, 'xl': 7.4, 'tfidf': 0.0}
+      weight  macro_f1  f1_class0  f1_class1  f1_class2  f1_latin  f1_bangla
+model                                                                       
+qwen     0.5    0.6013     0.7079     0.5453     0.5506    0.6412     0.4867
+xl      0.25    0.5915     0.7030     0.5306     0.5408    0.6247     0.4892
+tfidf   0.25    0.5277     0.6520     0.5045     0.4267    0.5444     0.4579
+BLEND           0.6164     0.7169     0.5587     0.5737    0.6537     0.5017
+
+Blend classification report (OOF):
+               precision    recall  f1-score   support
+
+           0     0.6955    0.7396    0.7169     23756
+           1     0.5745    0.5438    0.5587     18163
+           2     0.6023    0.5476    0.5737      5898
+
+    accuracy                         0.6416     47817
+   macro avg     0.6241    0.6103    0.6164     47817
+weighted avg     0.6381    0.6416    0.6391     47817
+
+Blend confusion matrix (rows = true 0/1/2):
+ [[17570  5495   691]
+ [ 6844  9877  1442]
+ [  847  1821  3230]]
+saved kaggle_final/results/local_fp16/submission.csv  rows=11955  pred dist={0: 0.533, 1: 0.354, 2: 0.113}
+      id  y_pred
+0   7891       1
+1  58497       1
+2   8995       2
+3  17207       1
+4   3148       1
+EXIT=0

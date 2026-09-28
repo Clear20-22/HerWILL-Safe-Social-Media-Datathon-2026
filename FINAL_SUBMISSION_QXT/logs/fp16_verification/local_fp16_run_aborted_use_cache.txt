@@ -1,0 +1,7 @@
+data=/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/data  out=kaggle_final/results/local_fp16  device=cuda (NVIDIA GeForce RTX 4090, capability (8, 9))  dtype=torch.float16
+torch 2.6.0+cu124 | transformers 4.57.6 | peft 0.21.0
+mode: PREDICT from adapters  recompute_oof=True  quick=False
+train=47817 test=11955 label dist=[0.497 0.38  0.123] class loss weights=[0.723 0.827 1.451]
+
+=== qwen ===
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.32it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.48it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.16it/s]

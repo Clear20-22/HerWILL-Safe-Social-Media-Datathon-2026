@@ -1,0 +1,44 @@
+{
+ "model": "Qwen/Qwen3-4B-Base",
+ "lora": {
+  "r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+   "q_proj",
+   "k_proj",
+   "v_proj",
+   "o_proj",
+   "gate_proj",
+   "up_proj",
+   "down_proj"
+  ]
+ },
+ "lr": 0.0001,
+ "hist": [
+  {
+   "epoch": 1,
+   "train_loss": 0.9322425236591282,
+   "val_f1": 0.6010850132343444,
+   "per_class": [
+    0.7187,
+    0.5409,
+    0.5437
+   ],
+   "minutes": 25.4
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.7231074486290845,
+   "val_f1": 0.6091226433242359,
+   "per_class": [
+    0.7086,
+    0.5617,
+    0.5571
+   ],
+   "minutes": 50.9
+  }
+ ],
+ "best_f1": 0.6091226433242359,
+ "best_epoch": 2
+}

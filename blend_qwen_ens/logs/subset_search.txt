@@ -1,0 +1,17 @@
+reference: Qwen 50% + 4 encoders 50%  = 0.6117
+Qwen 50% + subset of others 50% (equal inside the subset):
+  Q + LT    0.6131  vs full +0.0014 CI[-0.0009,+0.0038]
+  Q + LBT   0.6127  vs full +0.0010 CI[-0.0006,+0.0026]
+  Q + BT    0.6121  vs full +0.0005 CI[-0.0019,+0.0025]
+  Q + LDT   0.6119  vs full +0.0002 CI[-0.0014,+0.0020]
+  Q + DBT   0.6118  vs full +0.0002 CI[-0.0016,+0.0019]
+  Q + LDBT  0.6117  vs full +0.0000 CI[+0.0000,+0.0000]
+  Q + DT    0.6107  vs full -0.0009 CI[-0.0033,+0.0013]
+  Q + LD    0.6082  vs full -0.0035 CI[-0.0059,-0.0013]
+  Q + LDB   0.6079  vs full -0.0038 CI[-0.0059,-0.0018]
+  Q + LB    0.6059  vs full -0.0058 CI[-0.0083,-0.0035]
+  Q + DB    0.6054  vs full -0.0062 CI[-0.0085,-0.0039]
+  Q + L     0.6046  vs full -0.0072 CI[-0.0101,-0.0040]
+  Q + B     0.5995  vs full -0.0122 CI[-0.0155,-0.0097]
+  Q + D     0.5991  vs full -0.0126 CI[-0.0155,-0.0097]
+  Q + T     0.5981  vs full -0.0136 CI[-0.0174,-0.0102]

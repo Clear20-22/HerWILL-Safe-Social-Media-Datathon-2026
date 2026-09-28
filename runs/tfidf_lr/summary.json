@@ -1,0 +1,29 @@
+{
+ "oof_macro_f1": 0.5277253873010886,
+ "per_class_f1": {
+  "explicit": 0.652,
+  "subtle": 0.5045,
+  "neutral": 0.4267
+ },
+ "per_script_f1": {
+  "latin": 0.5444,
+  "bangla": 0.4579,
+  "mixed": 0.4623
+ },
+ "per_fold_f1": [
+  0.5287,
+  0.5232,
+  0.5294,
+  0.5274,
+  0.5299
+ ],
+ "best_epochs": null,
+ "efficiency": {
+  "train_min": 2.3,
+  "train_gpu_gb": "0 (CPU)",
+  "infer_gpu_gb": 0.0,
+  "params": "\u2264800k features x 3",
+  "saved": "not saved (retrains in 2.3 min)",
+  "posts_s": null
+ }
+}

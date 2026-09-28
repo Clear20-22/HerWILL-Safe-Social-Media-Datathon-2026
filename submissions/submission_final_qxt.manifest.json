@@ -1,0 +1,35 @@
+{
+ "file": "submissions/submission_final_qxt.csv",
+ "md5": "f78f32bf1b4a43983ff98dd2f4d32a6d",
+ "rows": 11955,
+ "matches_submitted_file": true,
+ "submitted_md5": "f78f32bf1b4a43983ff98dd2f4d32a6d",
+ "weights": {
+  "qwen3_4b_lora": 0.5,
+  "xlmr_xl_lora": 0.25,
+  "tfidf_lr": 0.25
+ },
+ "features": "text only; the id column is used only as a row key for joining and output",
+ "label_share": {
+  "0": 0.5321,
+  "1": 0.3553,
+  "2": 0.1126
+ },
+ "mode": "quick",
+ "source_runs": {
+  "qwen3_4b_lora": "runs/qwen3_4b_lora/test.npy",
+  "xlmr_xl_lora": "runs/xlmr_xl_lora/test.npy",
+  "tfidf_lr": "runs/tfidf_lr/test.npy"
+ },
+ "run_oof_macro_f1": {
+  "qwen3_4b_lora": 0.6015637025753305,
+  "xlmr_xl_lora": 0.5915475281424397,
+  "tfidf_lr": 0.5277253873010886
+ },
+ "input_md5": {
+  "qwen3_4b_lora": "8973b705a45513c8359afa5224b49b82",
+  "xlmr_xl_lora": "43247e94c471f222b36d7415cda37afc",
+  "tfidf_lr": "c878b5a15a7054ea61b1802aa4ff05d2"
+ },
+ "blend_oof_macro_f1": 0.616508277058727
+}

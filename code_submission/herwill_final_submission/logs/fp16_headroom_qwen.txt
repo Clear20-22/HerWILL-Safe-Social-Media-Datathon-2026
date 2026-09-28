@@ -1,0 +1,6 @@
+Qwen3-4B-Base + LoRA fold 0, 24 inputs (12 random, 12 longest), fp32 on CPU. fp16 max = 65504
+  residual: largest |activation| =     6559.0 (layer 18), 10.0% of fp16 max; median over layers 6421.7
+  mlp_in  : largest |activation| =     3207.8 (layer 6), 4.9% of fp16 max; median over layers 40.4
+  mlp_out : largest |activation| =     6286.2 (layer 6), 9.6% of fp16 max; median over layers 15.1
+  logits  : largest |logit| = 2.99
+  per-layer residual max: [8, 58, 67, 72, 78, 75, 6297, 6298, 6298, 6300, 6301, 6301, 6302, 6306, 6306, 6309, 6559, 6558, 6559, 6559, 6558, 6557, 6556, 6555, 6554, 6555, 6555, 6556, 6558, 6558, 6557, 6554, 6552, 6534, 4254, 5299]

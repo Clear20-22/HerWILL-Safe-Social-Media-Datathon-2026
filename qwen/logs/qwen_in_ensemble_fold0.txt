@@ -1,0 +1,18 @@
+current ensemble (4 models)        macroF1=0.5881  per-class=[0.708, 0.519, 0.537]  latin=0.6126 bangla=0.4845
+xlm-roberta-large alone            macroF1=0.5781  per-class=[0.708, 0.493, 0.533]  latin=0.6090 bangla=0.4619
+
+=== qwen3-4b-base_lora
+  alone                            macroF1=0.6091  per-class=[0.709, 0.562, 0.557]  latin=0.6469 bangla=0.4931
+  ensemble + qwen (weight 1)       macroF1=0.6011  per-class=[0.716, 0.536, 0.552]  latin=0.6305 bangla=0.4891
+                                   gain vs current: +0.0129 CI[+0.0080,+0.0182] P(no gain)=0.000
+  ensemble + qwen (weight 2)       macroF1=0.6068  per-class=[0.719, 0.54, 0.561]  latin=0.6409 bangla=0.4876
+                                   gain vs current: +0.0187 CI[+0.0122,+0.0254] P(no gain)=0.000
+  swap xlmr-base -> qwen           macroF1=0.6030  per-class=[0.715, 0.538, 0.556]  latin=0.6340 bangla=0.4917
+                                   gain vs current: +0.0148 CI[+0.0081,+0.0214] P(no gain)=0.000
+
+=== extra comparisons
+qwen alone vs current ensemble: +0.0211 CI[+0.0102,+0.0311] P(no gain)=0.000
+qwen + xlmr-large      0.6082  vs qwen alone: -0.0011 CI[-0.0085,+0.0060] P(no gain)=0.624
+qwen + tfidf           0.6039  vs qwen alone: -0.0052 CI[-0.0144,+0.0039] P(no gain)=0.857
+qwen x4 + 4 models     0.6139  vs qwen alone: +0.0048 CI[-0.0016,+0.0118] P(no gain)=0.081
+qwen x3 + 4 models     0.6114  vs qwen alone: +0.0022 CI[-0.0051,+0.0096] P(no gain)=0.271

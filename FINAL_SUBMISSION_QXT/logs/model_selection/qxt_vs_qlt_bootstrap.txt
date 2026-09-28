@@ -1,0 +1,21 @@
+5-fold OOF, n=47817. Single models: Q 0.6016  L 0.5788  T 0.5277  XL 0.5915
+Per-fold single models: Q [0.6057, 0.5923, 0.5957, 0.6066, 0.6074]  L [0.5781, 0.5708, 0.5788, 0.584, 0.5824]  T [0.5287, 0.5232, 0.5294, 0.5274, 0.5299]  XL [0.5949, 0.5823, 0.5908, 0.5932, 0.5965]
+Q+L+T (final_qlt)    OOF 0.6131  per-fold [0.619, 0.6018, 0.6142, 0.6183, 0.6127]  vs Q+L+T (final_qlt): +0.0000 CI[+0.0000,+0.0000] P(no gain)=1.000 folds better 0/5 test agreement 1.000
+Q+XL+T (candidate)   OOF 0.6165  per-fold [0.6226, 0.6096, 0.6128, 0.6175, 0.6201]  vs Q+L+T (final_qlt): +0.0034 CI[+0.0012,+0.0056] P(no gain)=0.001 folds better 3/5 test agreement 0.962
+Q+L+XL+T             OOF 0.6152  per-fold [0.6193, 0.6053, 0.6121, 0.6208, 0.6187]  vs Q+L+T (final_qlt): +0.0021 CI[+0.0000,+0.0041] P(no gain)=0.025 folds better 4/5 test agreement 0.968
+Q+XL                 OOF 0.6110  per-fold [0.6147, 0.6033, 0.6079, 0.6141, 0.615]  vs Q+L+T (final_qlt): -0.0022 CI[-0.0053,+0.0012] P(no gain)=0.900 folds better 2/5 test agreement 0.894
+
+Decision rule (fixed before the full OOF was seen): switch only if the gain is significant. -> SIGNIFICANT: the lower CI bound of Q+XL+T vs Q+L+T is above 0
+
+Q+XL+T (candidate) OOF classification report:
+              precision    recall  f1-score   support
+
+           0     0.6959    0.7397    0.7172     23756
+           1     0.5745    0.5445    0.5591     18163
+           2     0.6025    0.5468    0.5733      5898
+
+    accuracy                         0.6418     47817
+   macro avg     0.6243    0.6103    0.6165     47817
+weighted avg     0.6383    0.6418    0.6394     47817
+
+saved /home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/final_qxt/submission/submission_final_qxt.csv rows 11955 dist {0: 0.532, 1: 0.355, 2: 0.113} | agreement with final_qlt submission 0.962

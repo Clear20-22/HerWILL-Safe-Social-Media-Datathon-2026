@@ -1,0 +1,25 @@
+{
+ "model": "Qwen/Qwen3-4B-Base",
+ "epochs": 2,
+ "batch": 16,
+ "accum": 2,
+ "lr": 0.0001,
+ "warmup": 0.05,
+ "max_len": 152,
+ "lora": {
+  "r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+   "q_proj",
+   "k_proj",
+   "v_proj",
+   "o_proj",
+   "gate_proj",
+   "up_proj",
+   "down_proj"
+  ]
+ },
+ "prompt": "Classify the toxicity of this social media post (Bangla/English): explicit, subtle, or neutral.\nPost: ",
+ "seed": 42
+}

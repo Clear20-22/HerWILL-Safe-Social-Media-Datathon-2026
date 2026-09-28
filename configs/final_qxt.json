@@ -1,0 +1,15 @@
+{
+  "name": "final_qxt",
+  "description": "Soft-voting blend of three text-only models, each trained with the same 5-fold StratifiedKFold (seed 42).",
+  "weights": {"qwen3_4b_lora": 0.50, "xlmr_xl_lora": 0.25, "tfidf_lr": 0.25},
+  "runs_dir": "runs",
+  "raw_dir": "data/raw",
+  "processed_dir": "data/processed",
+  "output_csv": "submissions/submission_final_qxt.csv",
+  "manifest": "submissions/submission_final_qxt.manifest.json",
+  "expected_md5": "f78f32bf1b4a43983ff98dd2f4d32a6d",
+  "n_test": 11955,
+  "n_folds": 5,
+  "seed": 42,
+  "features": "text only; the id column is used only as a row key for joining and output"
+}

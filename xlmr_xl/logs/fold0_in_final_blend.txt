@@ -1,0 +1,4 @@
+fold 0 | qwen 0.6057 | xl 0.5949 | xlmr-large 0.5781 | final Q+L+T 0.6190
+Q .5 + XL .25 + T .25 (XL replaces L)    0.6226  vs final +0.0037 CI[-0.0004,+0.0078]
+Q .4 + L .2 + XL .2 + T .2               0.6193  vs final +0.0003 CI[-0.0039,+0.0040]
+Q .5 + XL .5                             0.6147  vs final -0.0042 CI[-0.0113,+0.0024]

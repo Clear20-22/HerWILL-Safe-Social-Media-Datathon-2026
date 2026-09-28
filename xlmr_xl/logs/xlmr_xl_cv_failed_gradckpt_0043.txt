@@ -1,0 +1,15 @@
+[2026-09-27 20:17:23] waiting for Qwen run to finish (DONE in qwen/logs/qwen3_4b_lora_cv.txt)
+[2026-09-28 00:42:24] Qwen finished: Qwen3-4B 5-fold OOF macro-F1 = 0.6016 saved /home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/qwen/submission/submission_qwen3_4b.csv rows=11955 dist={0: 0.527, 1: 0.352, 2: 0.12} 
+=== XLM-R XL LoRA CV  model=facebook/xlm-roberta-xl  gate=0.585
+Traceback (most recent call last):
+  File "/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/xlmr_xl/scripts/xlmr_xl_cv.py", line 140, in <module>
+    f0 = run_fold(0)
+  File "/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/xlmr_xl/scripts/xlmr_xl_cv.py", line 89, in run_fold
+    model = build_model()
+  File "/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/xlmr_xl/scripts/xlmr_xl_cv.py", line 73, in build_model
+    m.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hpc12/northwind/HerWILL-Safe-Social-Media-Datathon-2026/.venv/lib/python3.13/site-packages/transformers/modeling_utils.py", line 3689, in gradient_checkpointing_enable
+    raise ValueError(f"{self.__class__.__name__} does not support gradient checkpointing.")
+ValueError: XLMRobertaXLForSequenceClassification does not support gradient checkpointing.
+[2026-09-28 00:43:04] DONE

@@ -1,0 +1,50 @@
+{
+ "oof_macro_f1": 0.5915475281424397,
+ "per_class_f1": {
+  "explicit": 0.7031,
+  "subtle": 0.5302,
+  "neutral": 0.5414
+ },
+ "per_script_f1": {
+  "latin": 0.6252,
+  "bangla": 0.4883,
+  "mixed": 0.5139
+ },
+ "per_fold_f1": [
+  0.5949,
+  0.5823,
+  0.5908,
+  0.5932,
+  0.5965
+ ],
+ "best_epochs": [
+  {
+   "fold": 0,
+   "best_epoch": 2
+  },
+  {
+   "fold": 1,
+   "best_epoch": 3
+  },
+  {
+   "fold": 2,
+   "best_epoch": 3
+  },
+  {
+   "fold": 3,
+   "best_epoch": 2
+  },
+  {
+   "fold": 4,
+   "best_epoch": 2
+  }
+ ],
+ "efficiency": {
+  "train_min": 122.5,
+  "train_gpu_gb": "~18-20 (nvidia-smi)",
+  "infer_gpu_gb": 7.4,
+  "params": "3.52B total / 39.7M trainable",
+  "saved": "5 x 126 MB fp32 (63 MB fp16)",
+  "posts_s": 484.64864864864865
+ }
+}
